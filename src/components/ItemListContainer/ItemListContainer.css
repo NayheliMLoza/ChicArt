@@ -1,0 +1,24 @@
+
+.card{
+    margin: 20px;
+    padding: 10px;
+    background-color: rgb(202, 146, 253);
+    width: 250px;
+}
+
+.card-button{
+    background-color: transparent;
+    border: solid 2px;
+    font-size: 1rem;
+    color: black ;
+}
+
+.container-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.title{
+    margin: 10px;
+}
