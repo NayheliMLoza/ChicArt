@@ -1,18 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 .navbar-container{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-top: 20px;
     background-color: rgb(202, 146, 253);
     height: 70px;
+    align-items: center;
 }
 
 .list-container{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: start;
+    /* align-items: start; */
     list-style: none;
     width: 100%;
     margin-left: 30px;
@@ -20,12 +27,22 @@
 
 .button{
     background-color: transparent;
-    border: solid 2px;
-    font-size: 1.5rem;
+    border: solid 2px  #4a167a;
+    font-size: 1.3rem;
     color: black ;
+    text-decoration: none;
+    padding: 5px;
 }
 
-h1{
-    font-size: 3rem;
+.button:hover{
+    background-color: rgb(213, 169, 253);
+}
+
+.logo{
+    font-size: 4rem;
     margin-top: 10px;
+    text-decoration: none;
+    color:#4a167a;
+    font-weight: bold;
+    font-family: Agbalumo;
 }
