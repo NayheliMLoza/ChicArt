@@ -9,17 +9,19 @@ const NavBar = () => {
         <div>
         <Link to={'/'} className='logo' >ChicArt</Link>
         </div>
-        <div className="list-container">
+        <div >
             
                 
-                    <NavLink to={"/category/pulceras"} className={({isActive})=> isActive ? 'ActiveOption' : 'Option'}>Pulceras</NavLink>
+                    <ul className="list-container">
+                    <li><NavLink to={"/category/pulceras"} className='button'>Pulceras</NavLink></li>
                 
-                    <NavLink to={"/category/anillos"}className='button'>Anillos</NavLink>
-                
-                    <NavLink to={"/category/collares"} className='button'>collares</NavLink>
-                
-                    <NavLink to={"/category/aretes"} className='button'>Aretes</NavLink>
-               
+                <li><NavLink to={"/category/anillos"}className='button'>Anillos</NavLink></li>
+            
+                <li><NavLink to={"/category/collares"} className='button'>collares</NavLink></li>
+            
+                <li><NavLink to={"/category/aretes"} className='button'>Aretes</NavLink></li>
+           
+                    </ul>
         </div>
         <CartWidget/>
         </div>

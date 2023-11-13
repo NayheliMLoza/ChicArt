@@ -6,7 +6,7 @@ const products = [
                     description:"collar con dije de araña",
                     category:"collares",
                     stock: 30,
-                    image:""
+                    img:'./img/collar1.jpg'
                 },{
                     id:2,
                     title:"anillo corazon",
@@ -14,7 +14,7 @@ const products = [
                     description:"anillo de esqueleto corazon",
                     category:"anillos",
                     stock: 20,
-                    image:""
+                    img:'./img/anillo1.jpg'
                 },{
                     id:3,
                     title:"pulcera serpiente",
@@ -22,7 +22,7 @@ const products = [
                     description:"pulcera en forma de serpiente",
                     category:"pulceras",
                     stock: 30,
-                    image:""
+                    img:'./img/pulcera2.jpg'
                 },{
                     id:4,
                     title:"collar corazon",
@@ -30,7 +30,7 @@ const products = [
                     description:"collar corazon con alas de murcielago ",
                     category:"collares",
                     stock: 23,
-                    image:""
+                    img:'./img/collar2.jpg'
                 },{
                     id:5,
                     title:"aretes corazon",
@@ -38,7 +38,7 @@ const products = [
                     description:" aretes de corazon con alas",
                     category:"aretes",
                     stock: 10,
-                    image:""
+                    img:'./img/arete1.jpg'
                 },{
                     id:6,
                     title:"anillo araña",
@@ -46,7 +46,7 @@ const products = [
                     description:"anillo de araña con detalles en negro",
                     category:"anillos",
                     stock: 24,
-                    image:""
+                    img:'./img/anillo2.jpg'
                 },{
                     id:7,
                     title:"aretes manos",
@@ -54,7 +54,7 @@ const products = [
                     description:"aretes aretes de esqueleto",
                     category:"aretes",
                     stock: 40,
-                    image:""
+                    img:'./img/arete2.jpg'
                 },{
                     id:8,
                     title:"pulcera esqueleto",
@@ -62,7 +62,7 @@ const products = [
                     description:"pulcera de esqueleto",
                     category:"pulceras",
                     stock: 25,
-                    image:""
+                    img:'./img/pulcera1.jpg'
                 },{
                     id:9,
                     title:"aretes corazon",
@@ -70,7 +70,7 @@ const products = [
                     description:" aretes de corazon con alas",
                     category:"aretes",
                     stock: 30,
-                    image:""
+                    img:'./img/arete2.jpg'
                 },{
                     id:10,
                 title:"collar corazon",
@@ -78,7 +78,7 @@ const products = [
                 description:"collar corazon con alas de murcielago ",
                 category:"collares",
                 stock: 30,
-                 image:""
+                 img:'./img/collar1.jpg'
            },{
              id:11,
             title:"pulcera serpiente",
@@ -86,7 +86,7 @@ const products = [
             description:"pulcera en forma de serpiente",
              category:"pulceras",
              stock: 30,
-            image:""
+            img:'./img/pulcera2.jpg'
          },{
             id:12,
            title:"anillo corazon",
@@ -94,22 +94,8 @@ const products = [
             description:"anillo de esqueleto corazon",
              category:"anillos",
              stock: 30,
-                image:""
+                img:'./img/anillo1.jpg'
             }
         ]
     
-    export const getProducts = () => {
-        return ((resolve) =>{
-            setTimeout(() => {
-                resolve ()
-            }, 500)
-        })
-    }
-
-    export const getProductsById = (productId) => {
-        return ((resolve) => {
-            setTimeout(() => {
-                resolve(products.find(prod => prod.id === productId))
-            }, 500)
-        })
-    }
+        export default products;

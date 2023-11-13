@@ -31,31 +31,29 @@ export default ItemDetailContainer */
 import { useEffect, useState} from 'react'
 import{ useParams }  from 'react-router-dom'
 import ItemDetail from "../../components/ItemDetail/ItemDetail"
-import { getProductsById } from '../../asyncMock';
 import './style.css'
-
+import products from '../../components/Products.jsx/Products';
 
 const ItemDetailContainer = () => {
-  const [product, setProduct]= useState(null);
-  const{itemId} = useParams();
-  
+  const [product, setProduct] = useState({});
+  const { id } = useParams();
 
+  const fetchProduct = () => {
+      const selectedProduct = products.find((p) => p.id === parseInt(id));
+      if (selectedProduct) {
+          setProduct(selectedProduct);
+      }
+  };
 
-useEffect(()=>{
-  getProductsById(itemId)
-  .then(response => {
-    setProduct(response)
-  })
-  .catch(error =>{
-    console.log(error)
-  })
-}, [itemId]);
+  useEffect(() => {
+      fetchProduct();
+  }, []);
 
   return (
-    <div>
-      <ItemDetail {...product} />
-    </div>
-  )
-}
+      <div>
+          <ItemDetail itemSelected={product} />
+      </div>
+  );
+};
 
 export default ItemDetailContainer
